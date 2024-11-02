@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OceanuoText</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="theme-switcher">
+        <select id="themeSelect">
+            <option value="system">System Theme</option>
+            <option value="light">Light Mode</option>
+            <option value="dark">Dark Mode</option>
+        </select>
+    </div>
+
+    <div class="container">
+        <h1>OceanuoText</h1>
+        
+        <!-- Add API Config section -->
+        <div class="api-config">
+            <button id="configBtn" class="config-btn">
+                <i class="fas fa-cog"></i> API Settings
+            </button>
+            <div id="configModal" class="config-modal">
+                <div class="modal-content">
+                    <h3>API Configuration</h3>
+                    <div class="form-group">
+                        <label for="apiHost">API Host:</label>
+                        <input type="text" id="apiHost" placeholder="Enter API host...">
+                    </div>
+                    <div class="form-group">
+                        <label for="apiKey">API Key:</label>
+                        <input type="password" id="apiKey" placeholder="Enter API key...">
+                    </div>
+                    <div class="button-group">
+                        <button id="saveConfig" class="save-btn">Save</button>
+                        <button id="closeConfig" class="close-btn">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="options-container">
+            <div class="option-card" id="imageToText">
+                <h3><i class="fas fa-image"></i> Image To Text</h3>
+                <div class="file-drop-zone">
+                    <input type="file" id="imageInput" multiple accept="image/*">
+                    <p>Drop images here or click to upload</p>
+                </div>
+                <div id="imagePreview"></div>
+                <button class="process-btn">Process Images</button>
+            </div>
+
+            <div class="option-card">
+                <h3><i class="fas fa-check"></i> Proofread</h3>
+                <textarea placeholder="Enter text to proofread..."></textarea>
+                <button class="process-btn">Process</button>
+            </div>
+
+            <div class="option-card">
+                <h3><i class="fas fa-sync"></i> Rewrite</h3>
+                <textarea placeholder="Enter text to rewrite..."></textarea>
+                <button class="process-btn">Process</button>
+            </div>
+
+            <div class="option-card">
+                <h3><i class="fas fa-smile"></i> Friendly</h3>
+                <textarea placeholder="Enter text to make friendly..."></textarea>
+                <button class="process-btn">Process</button>
+            </div>
+
+            <div class="option-card">
+                <h3><i class="fas fa-briefcase"></i> Professional</h3>
+                <textarea placeholder="Enter text to make professional..."></textarea>
+                <button class="process-btn">Process</button>
+            </div>
+
+            <div class="option-card">
+                <h3><i class="fas fa-compress-alt"></i> Concise</h3>
+                <textarea placeholder="Enter text to make concise..."></textarea>
+                <button class="process-btn">Process</button>
+            </div>
+
+            <div class="option-card">
+                <h3><i class="fas fa-file-alt"></i> Summary</h3>
+                <textarea placeholder="Enter text to summarize..."></textarea>
+                <button class="process-btn">Process</button>
+            </div>
+
+            <div class="option-card">
+                <h3><i class="fas fa-key"></i> Key Points</h3>
+                <textarea placeholder="Enter text to extract key points..."></textarea>
+                <button class="process-btn">Process</button>
+            </div>
+
+            <div class="option-card">
+                <h3><i class="fas fa-list"></i> List</h3>
+                <textarea placeholder="Enter text to convert to list..."></textarea>
+                <button class="process-btn">Process</button>
+            </div>
+
+            <div class="option-card">
+                <h3><i class="fas fa-table"></i> Table</h3>
+                <textarea placeholder="Enter text to convert to table..."></textarea>
+                <button class="process-btn">Process</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

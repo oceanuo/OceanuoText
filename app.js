@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 const result = await callAPI(
                     '/v1/chat/completions',
-                    'You are an expert in text extraction. Please extract the text from the following image(s), ensuring to maintain the original layout and structure. Feel free to reformat the content as necessary, without regard for the order of the images. Output the extracted text directly without any additional commentary or formatting.',
+                    'You are a text extraction expert. Extract text from the following image(s) and make it, maintaining layout and structure. Output extracted text directly without any additional text. Image data: ',
                     'imageToText',
                     imageDataArray
                 );
